@@ -1,8 +1,7 @@
 # AI Agent Frameworks: Building Your Dream Team of AI Agents
 
-![AI Agents Team Collaboration](images/ai_agents_team_collaboration.png)
+![AI Agents Team Collaboration](./Images/agent_team.png)
 *Image placeholder: Visualization showing multiple AI agents working together in a system*
-
 ## Introduction
 
 In today's rapidly evolving AI landscape, building effective teams of AI agents has become a critical skill for developers looking to create sophisticated, collaborative AI systems. The choice of framework is pivotal - it can mean the difference between a streamlined development process and months of unnecessary technical challenges.
@@ -11,8 +10,6 @@ This guide provides an overview of the leading AI agent frameworks, highlighting
 
 ## Framework Comparison At-A-Glance
 
-![Framework Comparison](images/framework_comparison.png)
-*Image placeholder: Side-by-side comparison of all four frameworks*
 
 | Framework | Architecture | Best For | Learning Curve | State Management |
 |-----------|-------------|----------|---------------|-----------------|
@@ -29,7 +26,6 @@ LangChain has emerged as one of the most widely-adopted frameworks for building 
 *LangChain's chain-based architecture for building AI applications*
 
 ### Key Features
-
 - **Chain-based architecture** for sequential processing steps
 - **Modular components** that can be easily swapped and reconfigured
 - **Extensive integrations** with databases, APIs, and services
@@ -45,6 +41,9 @@ LangChain has emerged as one of the most widely-adopted frameworks for building 
 
 CrewAI takes a fundamentally different approach, focusing on creating human-like team structures with well-defined roles and responsibilities.
 
+
+![CrewAI](./Images/crewaiInt.png)
+
 ![CrewAI Key Features](./Images/crewai_keyf.png)
 *CrewAI's key features for agent team collaboration*
 
@@ -59,7 +58,7 @@ CrewAI takes a fundamentally different approach, focusing on creating human-like
 
 **Limitations**: Memory management issues in complex scenarios
 
-[**Read Detailed CrewAI Guide**](/home/shubham/prepwithai_backend/__ContentGuidelines/AI_Agent_Frameworks/CrewAI_Detailed_Guide.md) | [**Try CrewAI Notebook**](/home/shubham/prepwithai_backend/__ContentGuidelines/AI_Agent_Frameworks/Notebooks/CrewAI_Examples.ipynb)
+[**Read Detailed CrewAI Guide**](./CrewAI_Detailed_Guide.md) | [**Try CrewAI Notebook**](./Notebooks/CrewAI_Examples.ipynb)
 
 ## AutoGen: Microsoft's Conversational Approach
 
@@ -79,14 +78,15 @@ Developed by Microsoft, AutoGen takes a unique conversation-centric approach to 
 
 **Limitations**: Complex setup, resource intensive
 
-[**Read Detailed AutoGen Guide**](/home/shubham/prepwithai_backend/__ContentGuidelines/AI_Agent_Frameworks/AutoGen_Detailed_Guide.md) | [**Try AutoGen Notebook**](/home/shubham/prepwithai_backend/__ContentGuidelines/AI_Agent_Frameworks/Notebooks/AutoGen_Examples.ipynb)
+[**Read Detailed AutoGen Guide**](./AutoGen_Detailed_Guide.md) | [**Try AutoGen Notebook**](./Notebooks/AutoGen_Examples.ipynb)
 
 ## LangGraph: The Advanced Orchestrator
 
 LangGraph builds on LangChain's foundation, offering more sophisticated control flow for complex agent systems.
 
-![LangGraph Architecture](images/langgraph_architecture.png)
-*Image placeholder: Visualization of LangGraph's directed graph structure*
+![LangGraph Architecture](./Images/langgraph_architecture.png)
+*LangGraph's advanced orchestration capabilities for complex AI workflows*
+
 
 ### Key Features
 
@@ -99,13 +99,13 @@ LangGraph builds on LangChain's foundation, offering more sophisticated control 
 
 **Limitations**: Steep learning curve, requires LangChain knowledge
 
-[**Read Detailed LangGraph Guide**](/home/shubham/prepwithai_backend/__ContentGuidelines/AI_Agent_Frameworks/LangGraph_Detailed_Guide.md) | [**Try LangGraph Notebook**](/home/shubham/prepwithai_backend/__ContentGuidelines/AI_Agent_Frameworks/Notebooks/LangGraph_Examples.ipynb)
+[**Read Detailed LangGraph Guide**](./LangGraph_Detailed_Guide.md) | [**Try LangGraph Notebook**](./Notebooks/LangGraph_Examples.ipynb)
 
 ## Building Custom Solutions
 
 While each framework offers distinct advantages, many production-level systems ultimately require custom solutions that combine elements from multiple frameworks or implement proprietary approaches.
 
-[**Read About Custom Solutions**](/home/shubham/prepwithai_backend/__ContentGuidelines/AI_Agent_Frameworks/Custom_Solutions_Guide.md) | [**Try Hybrid Framework Notebook**](/home/shubham/prepwithai_backend/__ContentGuidelines/AI_Agent_Frameworks/Notebooks/Hybrid_Framework_Examples.ipynb)
+[**Read About Custom Solutions**](./Custom_Solutions_Guide.md) | [**Try Hybrid Framework Notebook**](./Notebooks/Hybrid_Framework_Examples.ipynb)
 
 ## Conclusion
 
