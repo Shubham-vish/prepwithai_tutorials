@@ -58,7 +58,7 @@ CrewAI takes a fundamentally different approach, focusing on creating human-like
 
 **Limitations**: Memory management issues in complex scenarios
 
-[**Read Detailed CrewAI Guide**](./CrewAI_Detailed_Guide.md) | [**Try CrewAI Notebook**](./Notebooks/CrewAI_Examples.ipynb)
+[**Read Detailed CrewAI Guide**](/Agents/CrewAI_Detailed_Guide.md) | [**Try CrewAI Notebook**](https://colab.research.google.com/github/Shubham-vish/prepwithai_tutorials/blob/main/Agents/Notebooks/CrewAI_Examples.ipynb)
 
 ## AutoGen: Microsoft's Conversational Approach
 
@@ -78,7 +78,7 @@ Developed by Microsoft, AutoGen takes a unique conversation-centric approach to 
 
 **Limitations**: Complex setup, resource intensive
 
-[**Read Detailed AutoGen Guide**](./AutoGen_Detailed_Guide.md) | [**Try AutoGen Notebook**](./Notebooks/AutoGen_Examples.ipynb)
+[**Read Detailed AutoGen Guide**](/Agents/AutoGen_Detailed_Guide.md) | [**Try AutoGen Notebook**](https://colab.research.google.com/github/Shubham-vish/prepwithai_tutorials/blob/main/Agents/Notebooks/AutoGen_Examples.ipynb)
 
 ## LangGraph: The Advanced Orchestrator
 
@@ -99,13 +99,13 @@ LangGraph builds on LangChain's foundation, offering more sophisticated control 
 
 **Limitations**: Steep learning curve, requires LangChain knowledge
 
-[**Read Detailed LangGraph Guide**](./LangGraph_Detailed_Guide.md) | [**Try LangGraph Notebook**](./Notebooks/LangGraph_Examples.ipynb)
+[**Read Detailed LangGraph Guide**](/Agents/LangGraph_Detailed_Guide.md) | [**Try LangGraph Notebook**](https://colab.research.google.com/github/Shubham-vish/prepwithai_tutorials/blob/main/Agents/Notebooks/LangGraph_Examples.ipynb)
 
 ## Building Custom Solutions
 
 While each framework offers distinct advantages, many production-level systems ultimately require custom solutions that combine elements from multiple frameworks or implement proprietary approaches.
 
-[**Read About Custom Solutions**](./Custom_Solutions_Guide.md) | [**Try Hybrid Framework Notebook**](./Notebooks/Hybrid_Framework_Examples.ipynb)
+[**Read About Custom Solutions**](/Agents/Custom_Solutions_Guide.md) | [**Try Hybrid Framework Notebook**](https://colab.research.google.com/github/Shubham-vish/prepwithai_tutorials/blob/main/Agents/Notebooks/Hybrid_Framework_Examples.ipynb)
 
 ## Conclusion
 

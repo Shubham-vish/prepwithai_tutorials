@@ -1,7 +1,20 @@
 # LangGraph: Advanced Workflow Orchestration for AI Agents
 
-![LangGraph Architecture](../images/langgraph_architecture.png)
-*Image placeholder: Visualization of LangGraph's directed graph structure*
+![LangGraph Architecture](./Images/langgraph_architecture.png)
+*Visualization of LangGraph's directed graph structure*
+
+## Helpful Resources
+
+- [Official LangGraph Documentation](https://python.langchain.com/docs/langgraph)
+- [LangGraph GitHub Repository](https://github.com/langchain-ai/langgraph)
+- [LangGraph Concepts Guide](https://python.langchain.com/docs/langgraph/concepts)
+- [LangGraph Tutorial](https://python.langchain.com/docs/langgraph/quick_start)
+- [LangGraph API Reference](https://api.python.langchain.com/en/latest/langgraph_api_reference.html)
+- [LangChain Blog: LangGraph](https://blog.langchain.dev/langgraph/)
+- [LangChain AI YouTube Tutorials](https://www.youtube.com/c/LangChainAI)
+
+
+For hands-on examples and executable code, check out our [LangGraph Examples Notebook](https://colab.research.google.com/github/Shubham-vish/prepwithai_tutorials/blob/main/Agents/Notebooks/LangGraph_Examples.ipynb).
 
 ## What is LangGraph?
 
@@ -18,8 +31,8 @@ At its core, LangGraph implements a **graph-based architecture** that represents
 - Sophisticated state management
 - Complex decision trees
 
-![LangGraph Workflow Visualization](../images/langgraph_visualization.png)
-*Image placeholder: Screenshot of LangGraph's workflow visualization tools*
+![LangGraph Workflow Visualization](./Images/langgraph_flow.png)
+*Screenshot of LangGraph's workflow visualization tools*
 
 ### Key Components
 
@@ -350,4 +363,4 @@ While it has a steeper learning curve than some alternatives, LangGraph's powerf
 
 For developers already familiar with LangChain who need more sophisticated workflow capabilities, LangGraph offers a natural progression path to building more complex AI agent systems.
 
-For hands-on examples and executable code, check out our [LangGraph Examples Notebook](/home/shubham/prepwithai_backend/__ContentGuidelines/AI_Agent_Frameworks/Notebooks/LangGraph_Examples.ipynb).
+For hands-on examples and executable code, check out our [LangGraph Examples Notebook](https://colab.research.google.com/github/Shubham-vish/prepwithai_tutorials/blob/main/Agents/Notebooks/LangGraph_Examples.ipynb).

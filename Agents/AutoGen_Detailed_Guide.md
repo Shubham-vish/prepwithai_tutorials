@@ -1,7 +1,19 @@
 # AutoGen: Microsoft's Conversational AI Agent Framework
 
-![AutoGen Framework](../autogen.png)
+![AutoGen Framework](./Images/autogen.png)
 *Microsoft's AutoGen framework for conversational AI agents*
+
+## Helpful Resources
+
+- [Official AutoGen Documentation](https://microsoft.github.io/autogen/)
+- [AutoGen GitHub Repository](https://github.com/microsoft/autogen)
+- [AutoGen Examples Gallery](https://microsoft.github.io/autogen/docs/Examples)
+- [AutoGen Discord Community](https://discord.gg/pAbnFJrkgZ)
+- [AutoGen API Reference](https://microsoft.github.io/autogen/docs/reference/)
+- [AutoGen Research Paper](https://arxiv.org/abs/2308.08155)
+- [Microsoft Blog: Introducing AutoGen](https://www.microsoft.com/en-us/research/blog/autogen-enabling-next-generation-large-language-model-applications/)
+
+For hands-on examples and executable code, check out our [AutoGen Examples Notebook](https://colab.research.google.com/github/Shubham-vish/prepwithai_tutorials/blob/main/Agents/Notebooks/AutoGen_Examples.ipynb).
 
 ## What is AutoGen?
 
@@ -18,8 +30,8 @@ The fundamental concept behind AutoGen is enabling natural dialogue between spec
 3. Generate, execute, and debug code
 4. Incorporate human feedback when needed
 
-![AutoGen Conversation Flow](../images/autogen_conversation_flow.png)
-*Image placeholder: Diagram showing how agents communicate in AutoGen*
+![AutoGen Conversation Flow](./Images/autogen_conversation_flow.png)
+*Diagram showing how agents communicate in AutoGen*
 
 ### Key Components
 
@@ -317,4 +329,4 @@ AutoGen represents a significant innovation in the AI agent framework landscape 
 
 While it requires more setup effort than some frameworks, AutoGen's powerful conversational capabilities, code execution features, and flexible agent configuration options make it an excellent choice for sophisticated multi-agent applications. The framework continues to evolve rapidly, with Microsoft actively developing new features and improvements.
 
-For hands-on examples and executable code, check out our [AutoGen Examples Notebook](/home/shubham/prepwithai_backend/__ContentGuidelines/AI_Agent_Frameworks/Notebooks/AutoGen_Examples.ipynb).
+For hands-on examples and executable code, check out our [AutoGen Examples Notebook](https://colab.research.google.com/github/Shubham-vish/prepwithai_tutorials/blob/main/Agents/Notebooks/AutoGen_Examples.ipynb).

@@ -1,6 +1,6 @@
 # CrewAI: Building Human-like AI Agent Teams
 
-![CrewAI Key Features](./Images/crewai_keyf.png)
+![CrewAI Key Features](./Images/crew_ai_roles.png)
 *CrewAI's key features for agent team collaboration*
 
 ## Helpful Resources
@@ -12,7 +12,7 @@
 - [CrewAI Blog](https://www.crewai.io/blog)
 
 
-For hands-on examples and executable code, check out our [CrewAI Examples Notebook](./Notebooks/CrewAI_Examples.ipynb).
+For hands-on examples and executable code, check out our [CrewAI Examples Notebook](https://colab.research.google.com/github/Shubham-vish/prepwithai_tutorials/blob/main/Agents/Notebooks/CrewAI_Examples.ipynb).
 
 ## What is CrewAI?
 
@@ -586,4 +586,4 @@ CrewAI offers a fresh perspective on multi-agent systems by focusing on human-li
 
 While it may not have all the advanced features of some other frameworks, its role-based architecture makes it exceptionally good at breaking down complex problems into manageable pieces assigned to specialized agents. This approach makes CrewAI particularly valuable for applications that naturally map to team structures, such as content creation, research assistance, and business process automation.
 
-For hands-on examples and executable code, check out our [CrewAI Examples Notebook](./Notebooks/CrewAI_Examples.ipynb).
+For hands-on examples and executable code, check out our [CrewAI Examples Notebook](https://colab.research.google.com/github/Shubham-vish/prepwithai_tutorials/blob/main/Agents/Notebooks/CrewAI_Examples.ipynb).

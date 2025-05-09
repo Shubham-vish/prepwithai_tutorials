@@ -1,7 +1,18 @@
 # Custom and Hybrid AI Agent Solutions: Beyond Standard Frameworks
 
-![Custom AI Agent Solutions](../images/custom_solutions.png)
-*Image placeholder: Visualization of a custom multi-framework agent architecture*
+![Custom AI Agent Solutions](./Images/custom_solutions.png)
+*Visualization of a custom multi-framework agent architecture*
+
+## Helpful Resources
+
+- [LangChain AI Agent Development Guide](https://python.langchain.com/docs/integrations/agents/)
+- [Microsoft Research: Foundation of Autonomous Agents](https://www.microsoft.com/en-us/research/group/autonomous-systems-group-robotics/articles/foundation-of-autonomous-agents/)
+- [Autonomous Agent Architectures Blog](https://lilianweng.github.io/posts/2023-06-23-agent/)
+- [Building LLM-powered Autonomous Agents](https://blog.langchain.dev/building-llm-powered-autonomous-agents/)
+- [Stanford Agent Framework Overview](https://crfm.stanford.edu/2023/06/16/agent-framework.html)
+- [LlamaIndex Agent Framework](https://docs.llamaindex.ai/en/stable/module_guides/deploying/agents/)
+
+For hands-on examples and executable code, check out our [Hybrid Framework Examples Notebook](./Notebooks/Hybrid_Framework_Examples.ipynb).
 
 ## Why Consider Custom Solutions?
 
@@ -29,6 +40,27 @@ This combination uses LangChain's robust ecosystem of integrations while leverag
 from langchain.agents import Tool
 from langchain.utilities import SerpAPIWrapper
 from langgraph.graph import StateGraph
+from langchain_openai import ChatOpenAI, AzureChatOpenAI
+
+# Set up OpenAI client
+# Option 1: Standard OpenAI
+openai_llm = ChatOpenAI(
+    model="gpt-4",
+    temperature=0.7,
+    api_key="your-openai-api-key"  # Replace with your actual API key
+)
+
+# Option 2: Azure OpenAI
+azure_llm = AzureChatOpenAI(
+    azure_deployment="gpt-4",  # The deployment name you chose when you deployed the GPT-4 model
+    openai_api_version="2023-05-15",
+    azure_endpoint="https://your-resource-name.openai.azure.com/",
+    api_key="your-azure-openai-api-key",  # Replace with your actual Azure OpenAI API key
+    temperature=0.7
+)
+
+# Select the LLM to use
+llm = openai_llm  # Change to azure_llm to use Azure OpenAI
 
 # Use LangChain for tools and integrations
 search = SerpAPIWrapper()
@@ -54,16 +86,62 @@ This pattern combines CrewAI's intuitive role definitions with AutoGen's powerfu
 ```python
 from crewai import Agent as CrewAgent, Crew
 from autogen import AssistantAgent, UserProxyAgent, GroupChat
+from langchain_openai import ChatOpenAI, AzureChatOpenAI
+
+# Configure language models
+# Option 1: Standard OpenAI for CrewAI
+openai_llm = ChatOpenAI(
+    model="gpt-4",
+    temperature=0.7,
+    api_key="your-openai-api-key"  # Replace with your actual API key
+)
+
+# Option 2: Azure OpenAI for CrewAI
+azure_llm = AzureChatOpenAI(
+    azure_deployment="gpt-4",  # The deployment name you chose
+    openai_api_version="2023-05-15",
+    azure_endpoint="https://your-resource-name.openai.azure.com/",
+    api_key="your-azure-openai-api-key",  # Replace with your actual Azure OpenAI API key
+    temperature=0.7
+)
+
+# Configure AutoGen
+# Option 1: Standard OpenAI for AutoGen
+openai_config_list = [
+    {
+        'model': 'gpt-4',
+        'api_key': 'your-openai-api-key'  # Replace with your actual API key
+    }
+]
+
+# Option 2: Azure OpenAI for AutoGen
+azure_config_list = [
+    {
+        'model': 'gpt-4',  # Your deployment name
+        'api_type': 'azure',
+        'api_version': '2023-05-15',
+        'api_key': 'your-azure-openai-api-key',  # Replace with your actual Azure OpenAI API key
+        'api_base': 'https://your-resource-name.openai.azure.com/'
+    }
+]
+
+# Select which configurations to use
+crew_llm = openai_llm  # Change to azure_llm to use Azure OpenAI with CrewAI
+autogen_config = openai_config_list  # Change to azure_config_list to use Azure with AutoGen
 
 # Define team roles with CrewAI
 researcher = CrewAgent(
     role="Research Analyst",
     goal="Gather comprehensive information",
-    backstory="You are an expert researcher."
+    backstory="You are an expert researcher.",
+    llm=crew_llm  # Using the selected LLM
 )
 
 # Use AutoGen for sophisticated agent-to-agent conversations
-assistant = AssistantAgent(name="AI_Assistant")
+assistant = AssistantAgent(
+    name="AI_Assistant",
+    llm_config={"config_list": autogen_config}
+)
 user_proxy = UserProxyAgent(name="User")
 ```
 
@@ -194,14 +272,53 @@ def select_model_for_task(task):
 Let's examine a practical example of a hybrid solution - a research assistant that combines multiple frameworks:
 
 ```python
+import os
 from langchain.tools import WikipediaQueryRun
 from langchain.utilities import WikipediaAPIWrapper
 from autogen import AssistantAgent, UserProxyAgent
 from crewai import Agent, Task, Crew
 import langgraph.graph as lg
+from langchain_openai import ChatOpenAI, AzureChatOpenAI
 
 class ResearchAssistantSystem:
-    def __init__(self):
+    def __init__(self, provider="openai"):
+        # Configure LLMs based on the provider
+        if provider == "azure":
+            # Azure OpenAI setup
+            self.llm = AzureChatOpenAI(
+                azure_deployment="gpt-4",
+                openai_api_version="2023-05-15",
+                azure_endpoint=os.environ.get("AZURE_OPENAI_ENDPOINT", "https://your-resource-name.openai.azure.com/"),
+                api_key=os.environ.get("AZURE_OPENAI_API_KEY", "your-azure-openai-api-key"),
+                temperature=0.7
+            )
+            
+            # Azure OpenAI config for AutoGen
+            self.autogen_config = {
+                "config_list": [{
+                    'model': 'gpt-4',  # Your deployment name
+                    'api_type': 'azure',
+                    'api_version': '2023-05-15',
+                    'api_key': os.environ.get("AZURE_OPENAI_API_KEY", "your-azure-openai-api-key"),
+                    'api_base': os.environ.get("AZURE_OPENAI_ENDPOINT", "https://your-resource-name.openai.azure.com/")
+                }]
+            }
+        else:
+            # Standard OpenAI setup
+            self.llm = ChatOpenAI(
+                model="gpt-4",
+                temperature=0.7,
+                api_key=os.environ.get("OPENAI_API_KEY", "your-openai-api-key")
+            )
+            
+            # OpenAI config for AutoGen
+            self.autogen_config = {
+                "config_list": [{
+                    'model': 'gpt-4',
+                    'api_key': os.environ.get("OPENAI_API_KEY", "your-openai-api-key")
+                }]
+            }
+            
         # LangChain for tools
         self.wikipedia = WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper())
         
@@ -209,18 +326,21 @@ class ResearchAssistantSystem:
         self.researcher = Agent(
             role="Research Specialist",
             goal="Find comprehensive information on topics",
-            backstory="You are an expert at finding reliable information."
+            backstory="You are an expert at finding reliable information.",
+            llm=self.llm  # Using the configured LLM
         )
         self.writer = Agent(
             role="Content Writer",
             goal="Transform research into clear content",
-            backstory="You excel at creating readable content from complex information."
+            backstory="You excel at creating readable content from complex information.",
+            llm=self.llm  # Using the configured LLM
         )
         
         # AutoGen for conversations
         self.conversation_agent = AssistantAgent(
             name="Conversational_Interface",
-            system_message="You help users refine their research questions."
+            system_message="You help users refine their research questions.",
+            llm_config=self.autogen_config
         )
         
         # LangGraph for workflow control
@@ -284,4 +404,4 @@ While standard frameworks like LangChain, CrewAI, AutoGen, and LangGraph provide
 
 The field of AI agent development is still rapidly evolving, and what requires custom development today may become standard features in frameworks tomorrow. The most successful approaches maintain flexibility while building on the solid foundations provided by the existing ecosystem.
 
-For hands-on examples and executable code demonstrating hybrid approaches, check out our [Hybrid Framework Examples Notebook](/home/shubham/prepwithai_backend/__ContentGuidelines/AI_Agent_Frameworks/Notebooks/Hybrid_Framework_Examples.ipynb).
+For hands-on examples and executable code demonstrating hybrid approaches, check out our [Hybrid Framework Examples Notebook](./Notebooks/Hybrid_Framework_Examples.ipynb).
