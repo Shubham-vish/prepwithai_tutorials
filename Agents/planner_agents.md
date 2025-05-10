@@ -43,33 +43,24 @@ flowchart TD
     classDef checker fill:#ADD8E6,stroke:#333,stroke-width:1px,color:#000;
     classDef reviewer fill:#DDA0DD,stroke:#333,stroke-width:1px,color:#000;
     classDef final fill:#C0C0C0,stroke:#000,stroke-width:2px,color:#000,font-weight:bold;
-    classDef infra fill:#E0FFFF,stroke:#333,stroke-width:1px,color:#000;
+    classDef decision fill:#333,stroke:#222,color:#fff;
 
-    %% Main Workflow
-    A(["📩 User Input<br>Content Idea/Topic"]) --> B(["📋 Content Planner Agent"])
-    B --> C(["🔍 Research Agent"])
-    C --> D(["✍️ Writer Agent"])
-    D --> E(["✔️ Fact Checker Agent"])
-    E --> F(["🧠 Reviewer Agent"])
-    F -->|🔁 Feedback Loop| D
-    F --> G{✅ Approved?}
+    %% Main Nodes
+    A(["<br>📩 User Input<br><sub>Initial content idea or topic</sub><br>&nbsp;"])
+    B(["<br>📋 Content Planner Agent<br><sub>Breaks the idea into a structured content outline</sub><br>&nbsp;"]):::planner
+    C(["<br>🔍 Research Agent <br><sub>Finds supporting data, examples, or trends</sub><br>&nbsp;"]):::research
+    D(["<br>✍️ Writer Agent<br><sub>Creates the first script using plan and research</sub><br>&nbsp;"]):::writer
+    E(["<br>✔️ Fact Checker Agent<br><sub>Verifies claims, numbers, and source accuracy</sub><br>&nbsp;"]):::checker
+    F(["<br>🧠 Reviewer Agent<br><sub>Refines flow, tone, and provides feedback</sub><br>&nbsp;"]):::reviewer
+    G{<br>✅ Approved?<br>&nbsp;}:::decision
+    H(["<br>🎯 Final Polished Script<br><sub>Final version after review loop</sub><br>&nbsp;"]):::final
+
+    %% Flow Logic
+    A --> B --> C --> D --> E --> F
+    F --> G
     G -- ❌ No --> D
-    G -- ✔️ Yes --> H(["🎯 Final Polished Script"])
+    G -- ✔️ Yes --> H
 
-    %% Deployment Track
-    H --> I(["🧩 Agent Collaboration Logic"])
-    H --> J(["🛠️ Tech Stack"])
-    H --> K(["🔧 Frameworks<br>(LangChain, CrewAI)"])
-    H --> L(["📐 System Architecture"])
-
-    %% Class Assignment
-    class B planner;
-    class C research;
-    class D writer;
-    class E checker;
-    class F reviewer;
-    class H final;
-    class I,J,K,L infra;
 ```
 
 ## Implementation Frameworks
