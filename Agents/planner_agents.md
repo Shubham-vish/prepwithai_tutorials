@@ -30,35 +30,37 @@ The most important aspect of building a multi-agent system is understanding how 
 
 In this blog series, we'll build and deploy a complete AI agent system featuring multiple specialized agents. We'll discuss everything from the technical stack and frameworks to the architecture needed to make it work effectively.
 
+## System Architecture Visualization
 
+Below is a detailed flowchart showing the complete multi-agent system architecture:
 
 ```mermaid
 flowchart TD
     %% Style Definitions
-    classDef planner fill:#FFD700,stroke:#333,stroke-width:1px;
-    classDef research fill:#FFADAD,stroke:#333,stroke-width:1px;
-    classDef writer fill:#90EE90,stroke:#333,stroke-width:1px;
-    classDef checker fill:#ADD8E6,stroke:#333,stroke-width:1px;
-    classDef reviewer fill:#DDA0DD,stroke:#333,stroke-width:1px;
-    classDef final fill:#C0C0C0,stroke:#000,stroke-width:2px,font-weight:bold;
-    classDef infra fill:#E0FFFF,stroke:#333,stroke-width:1px;
+    classDef planner fill:#FFD700,stroke:#333,stroke-width:1px,color:#000;
+    classDef research fill:#FFADAD,stroke:#333,stroke-width:1px,color:#000;
+    classDef writer fill:#90EE90,stroke:#333,stroke-width:1px,color:#000;
+    classDef checker fill:#ADD8E6,stroke:#333,stroke-width:1px,color:#000;
+    classDef reviewer fill:#DDA0DD,stroke:#333,stroke-width:1px,color:#000;
+    classDef final fill:#C0C0C0,stroke:#000,stroke-width:2px,color:#000,font-weight:bold;
+    classDef infra fill:#E0FFFF,stroke:#333,stroke-width:1px,color:#000;
 
     %% Main Workflow
-    A(User_Input_Content_Idea/Topic) --> B(Content_Planner_Agent)
-    B --> C(Research_Agent)
-    C --> D(Writer_Agent)
-    D --> E(Fact_Checker_Agent)
-    E --> F(Reviewer_Agent)
-    F -->|Feedback_Loop| D
-    F --> G{Approved?}
-    G -- No --> D
-    G -- Yes --> H(Final_Polished_Script)
+    A(["📩 User Input<br>Content Idea/Topic"]) --> B(["📋 Content Planner Agent"])
+    B --> C(["🔍 Research Agent"])
+    C --> D(["✍️ Writer Agent"])
+    D --> E(["✔️ Fact Checker Agent"])
+    E --> F(["🧠 Reviewer Agent"])
+    F -->|🔁 Feedback Loop| D
+    F --> G{✅ Approved?}
+    G -- ❌ No --> D
+    G -- ✔️ Yes --> H(["🎯 Final Polished Script"])
 
     %% Deployment Track
-    H --> I(Agent_Collaboration_Logic)
-    H --> J(Tech_Stack)
-    H --> K(Frameworks_LangChain_CrewAI)
-    H --> L(System_Architecture)
+    H --> I(["🧩 Agent Collaboration Logic"])
+    H --> J(["🛠️ Tech Stack"])
+    H --> K(["🔧 Frameworks<br>(LangChain, CrewAI)"])
+    H --> L(["📐 System Architecture"])
 
     %% Class Assignment
     class B planner;
@@ -68,3 +70,23 @@ flowchart TD
     class F reviewer;
     class H final;
     class I,J,K,L infra;
+```
+
+## Implementation Frameworks
+
+In the upcoming posts, we'll explore different frameworks that make building multi-agent systems easier:
+
+1. **LangChain** - For connecting large language models to other sources of data
+2. **CrewAI** - For orchestrating multiple AI agents in a team
+3. **AutoGen** - For building conversational agents that can interact with each other
+4. **LangGraph** - For creating complex workflows with multiple agents
+
+## Conclusion
+
+Building multi-agent AI systems represents the next evolution in AI application development. By distributing specialized tasks across multiple agents, we can create more robust, accurate, and capable AI systems than what's possible with single-agent approaches.
+
+Stay tuned for the next post in this series, where we'll dive deeper into the technical implementation of our first agent team.
+
+---
+
+*Are you interested in learning more about AI agent frameworks? Leave a comment below!*
