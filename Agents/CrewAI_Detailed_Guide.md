@@ -48,29 +48,6 @@ CrewAI's architecture centers around the concept of human team structures, with 
 ![CrewAI Agent Definition](./Images/crewai_agent_def.png)
 *Example of how agents are defined in CrewAI with roles and backstories*
 
-### How It All Works Together
-
-1. The Crew organizes the overall operation
-2. AI Agents work on their specialized tasks
-3. The Process ensures smooth collaboration
-4. Tasks get completed to achieve the goal
-
-## Why Choose CrewAI?
-
-### Key Features
-
-1. **Role-Based Agents**: Create specialized agents with defined roles, expertise, and goals - from researchers to analysts to writers.
-
-2. **Flexible Tools**: Equip agents with custom tools and APIs to interact with external services and data sources.
-
-3. **Intelligent Collaboration**: Agents work together, sharing insights and coordinating tasks to achieve complex objectives.
-
-4. **Task Management**: Define sequential or parallel workflows, with agents automatically handling task dependencies.
-
-5. **Backstory-Driven Behavior**: Agents can be given rich backstories that inform their approach to tasks, leading to more specialized behaviors.
-
-6. **Low Setup Overhead**: Compared to some other frameworks, CrewAI has a relatively straightforward learning curve.
-
 
 ### Example: Defining Agents:
 ```yaml
@@ -117,6 +94,31 @@ reporting_task:
   agent: reporting_analyst
   output_file: report.md
 ```
+
+### How It All Works Together
+
+1. The Crew organizes the overall operation
+2. AI Agents work on their specialized tasks
+3. The Process ensures smooth collaboration
+4. Tasks get completed to achieve the goal
+
+## Why Choose CrewAI?
+
+### Key Features
+
+1. **Role-Based Agents**: Create specialized agents with defined roles, expertise, and goals - from researchers to analysts to writers.
+
+2. **Flexible Tools**: Equip agents with custom tools and APIs to interact with external services and data sources.
+
+3. **Intelligent Collaboration**: Agents work together, sharing insights and coordinating tasks to achieve complex objectives.
+
+4. **Task Management**: Define sequential or parallel workflows, with agents automatically handling task dependencies.
+
+5. **Backstory-Driven Behavior**: Agents can be given rich backstories that inform their approach to tasks, leading to more specialized behaviors.
+
+6. **Low Setup Overhead**: Compared to some other frameworks, CrewAI has a relatively straightforward learning curve.
+
+
 ### Why Choose CrewAI?
 
 - 🧠 **Autonomous Operation**: Agents make intelligent decisions based on their roles and available tools

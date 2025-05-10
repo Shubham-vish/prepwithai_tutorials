@@ -1,6 +1,6 @@
 # LangChain: The Pioneer of AI Agent Frameworks
 
-![LangChain Architecture](../langchain1.png)
+![LangChain Architecture](./Images/langchain1.png)
 *LangChain's chain-based architecture for building AI applications*
 
 ## What is LangChain?
