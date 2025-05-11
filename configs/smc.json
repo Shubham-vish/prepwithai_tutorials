@@ -1,0 +1,47 @@
+{
+  "title": "Smart Money Concept - Guide",
+  "showIndex": true,
+  "basePath":"https://raw.githubusercontent.com/Shubham-vish/prepwithai_tutorials/main",
+  "items": [
+    {
+      "title": "What is SMC?",
+      "file": "SMC/What-Is-SMC.md",
+      "showTOC": true
+    },
+    {
+      "title": "Why you Should Learn SMC?",
+      "file": "SMC/Why-Learn-SMC.md",
+      "showTOC": true
+    },
+    {
+      "title": "Market Participants",
+      "file": "SMC/Market-Participants.md",
+      "showTOC": true
+    },
+    {
+      "title": "Types of Waves in SMC?",
+      "file": "SMC/Types-of-Waves-in-SMC.md",
+      "showTOC": true
+    },
+    {
+      "title": "Liquidity",
+      "file": "SMC/Liquidity.md",
+      "showTOC": true
+    },
+    {
+      "title": "Market Structure Shift",
+      "file": "SMC/Market-Structure-Shift.md",
+      "showTOC": true
+    },
+    {
+      "title": "Break of Structure",
+      "file": "SMC/Break-of-Structure.md",
+      "showTOC": true
+    },
+    {
+      "title": "Assets used",
+      "file": "SMC/Assets.md",
+      "showTOC": false
+    }
+  ]
+}

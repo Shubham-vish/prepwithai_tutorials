@@ -1,0 +1,20 @@
+# Azure OpenAI Configuration
+AZURE_OPENAI_API_KEY=<GUID>
+AZURE_OPENAI_ENDPOINT=https://topic-navigator.openai.azure.com
+AZURE_API_BASE=https://topic-navigator.openai.azure.com
+AZURE_API_VERSION=2024-02-15-preview
+AZURE_DEPLOYMENT_NAME=gpt-4o
+DEPLOYMENT_NAME=gpt-4o
+GEMINI_API_KEY = <GUID>
+# OpenAI Configuration
+OPENAI_API_TYPE=azure
+OPENAI_API_VERSION=2024-02-15-preview
+
+# Search Service API Keys
+SERPAPI_API_KEY=<GUID>
+TAVILY_API_KEY=<GUID>
+
+# Model Configuration
+MODEL_NAME=gpt-4o
+MODEL_TEMPERATURE=0
+

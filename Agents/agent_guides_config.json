@@ -1,0 +1,51 @@
+{
+  "title": "AI Agent Frameworks Guide Configuration",
+  "description": "Configuration file for AI agent framework guides and associated notebooks",
+  "base_path": "/home/shubham/prepwithai_tutorials/Agents",
+  "main_guide": "AI_Agent_Frameworks_Detailed_Guide.md",
+  "guides": [
+    {
+      "title": "CrewAI Framework",
+      "file": "CrewAI_Detailed_Guide.md",
+      "notebooks": ["Notebooks/CrewAI_Examples.ipynb"],
+      "has_azure_integration": true,
+      "has_openai_integration": true
+    },
+    {
+      "title": "AutoGen Framework",
+      "file": "AutoGen_Detailed_Guide.md",
+      "notebooks": ["Notebooks/AutoGen_Examples.ipynb"],
+      "has_azure_integration": true,
+      "has_openai_integration": true
+    },
+    {
+      "title": "LangGraph Framework",
+      "file": "LangGraph_Detailed_Guide.md",
+      "notebooks": ["Notebooks/LangGraph_Examples.ipynb"],
+      "has_azure_integration": true,
+      "has_openai_integration": true
+    },
+    {
+      "title": "LangChain Framework",
+      "file": "LangChain_Detailed_Guide.md",
+      "notebooks": ["Notebooks/LangChain_Examples.ipynb"],
+      "has_azure_integration": true,
+      "has_openai_integration": true
+    },
+    {
+      "title": "Custom Solutions",
+      "file": "Custom_Solutions_Guide.md",
+      "notebooks": ["Notebooks/Hybrid_Framework_Examples.ipynb"],
+      "has_azure_integration": true,
+      "has_openai_integration": true
+    }
+  ],
+  "images_directory": "Images",
+  "notebooks_directory": "Notebooks",
+  "metadata": {
+    "created": "2023-07-10",
+    "version": "1.0",
+    "supports_azure": true,
+    "supports_openai": true
+  }
+}
