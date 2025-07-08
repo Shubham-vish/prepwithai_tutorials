@@ -31,8 +31,9 @@ Then:
 ---
 
 ### ✅ Step 2: Paste This Prompt
+create automation task every day at 12 PM, search for entry level software engineering jobs at top startups, use web search and email me the results.
 
-```
+```sql
 create automation task every day at 12 PM, search for entry level software engineering jobs at top startups, use web search and email me the results.
 ```
 
@@ -67,6 +68,8 @@ Once saved:
 ---
 
 ## 📝 Final Copy-Paste Prompt (Use This)
+
+create automation task every day at 12 PM, search for entry level software engineering jobs at top startups, use web search and email me the results.
 
 ```
 create automation task every day at 12 PM, search for entry level software engineering jobs at top startups, use web search and email me the results.
