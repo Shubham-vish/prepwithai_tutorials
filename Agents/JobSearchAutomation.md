@@ -39,9 +39,9 @@ create automation task every day at 12 PM, search for entry level software engin
 
 📌 **Important**:
 - You can change:
-  - Time (`12 PM IST`) to your preferred schedule
-  - Role (`entry-level software engineering`) to anything (e.g., `data analyst`, `AI intern`, `UI/UX designer`)
-  - Location (`India`, `Remote`, etc.)
+  - Time `12 PM IST` to your preferred schedule
+  - Role `entry-level software engineering` to anything (e.g., `data analyst`, `AI intern`, `UI/UX designer`)
+  - Location `India`, `Remote`, etc.)
 
 ---
 
